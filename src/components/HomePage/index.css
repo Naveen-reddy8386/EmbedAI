@@ -1,0 +1,263 @@
+.container {
+  background-color: rgb(237, 239, 241);
+  display: flex;
+  overflow: hidden;
+}
+aside {
+  overflow: hidden;
+  background-color: #ffffff;
+  height: 100vh;
+  border-right: 1px solid rgb(202, 200, 200);
+  padding: 13px;
+  position: fixed;
+}
+.createBtn {
+  display: flex;
+  flex-direction: row;
+  height: 45px;
+  font-size: 17px;
+  width: 120px;
+  border: none;
+  border-radius: 70px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.createBtn:hover {
+  transition: 0.1s ease;
+  background-color: #c7c6c6;
+}
+.discoverBtn {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 47px;
+  width: 210px;
+  z-index: 1;
+
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: 100;
+  margin-top: -17px;
+}
+.discoverBtn:hover {
+  transition: 0.1s ease;
+  background-color: #c7c6c6;
+}
+.plusIcon {
+  font-size: 32px;
+  color: rgb(113, 112, 112);
+}
+.comp {
+  margin-right: 5px;
+  font-size: 26px;
+}
+.sign_in {
+  height: 38px;
+  width: 210px;
+  border: 1px solid rgb(166, 164, 164);
+  border-radius: 18px;
+  background-color: #ffffff;
+  margin-top: 520px;
+}
+.sign_up {
+  height: 38px;
+  width: 210px;
+  border: none;
+  border-radius: 18px;
+  color: #ffffff;
+  background-color: rgb(49, 48, 48);
+  margin-top: 8px;
+}
+.search {
+  height: 40px;
+  width: 400px;
+  background-color: #d7d7d7;
+  border-radius: 40px;
+  display: flex;
+  justify-content: start;
+  padding: 10px;
+  align-items: center;
+  margin: 25px;
+}
+.si {
+  border: none;
+  background-color: transparent;
+  color: rgb(22, 22, 22);
+  outline: none;
+  height: 40px;
+  width: 400px;
+}
+.head {
+  font-size: 17px;
+}
+.search_con {
+  position: absolute;
+  right: 0;
+}
+.cont {
+  position: relative; /* Add position relative to make ::after absolute position relative to this container */
+  height: 300px;
+  width: 1000px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  margin-top: 130px;
+  margin-left: 50px;
+  border-radius: 30px;
+  background-color: rgb(218, 219, 221);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+li {
+  height: 150px;
+  border-radius: 25px;
+  width: 290px;
+  background-color: #dddbdb;
+  margin: 10px;
+  display: flex;
+}
+li:hover {
+  background-color: #c3c1c1;
+}
+li img {
+  height: 120px;
+  width: 100px;
+  border-radius: 10px;
+  margin: 10px;
+  margin-top: 15px;
+}
+.container_ {
+  overflow-x: auto;
+  flex-wrap: wrap;
+  margin-left: 230px;
+}
+.p {
+  color: #000000;
+}
+
+.outter {
+  display: flex;
+}
+/* .inner {
+  height: 190px;
+  border-radius: 25px;
+  width: 290px;
+  background-color: #7f7b7b;
+  margin: 10px;
+}
+.inner:hover {
+  background-color: white;
+} */
+.inner {
+  position: relative; /* Add position relative for absolute positioning of the overlay */
+  height: 190px;
+  border-radius: 25px;
+  padding: 10px;
+  width: 290px;
+  background-color: #c8c6c6;
+  margin: 10px;
+  transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+.inner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  /* Semi-transparent white overlay */
+  pointer-events: none; /* Ensure the overlay doesn't interfere with hover */
+  transition: background-position 0.3s ease; /* Add transition for smooth movement */
+}
+
+.inner:hover {
+  transform: perspective(100px) rotateY(1deg); /* Apply a slight bend effect on hover */
+}
+
+.inner:hover::after {
+  background-position: calc(50% + 10px) calc(50% + 10px); /* Move the background position on hover */
+  background-color: rgba(146, 144, 144, 0.5);
+}
+img {
+  border-radius: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+.inner-in {
+  display: flex;
+  justify-content: start;
+}
+.pili {
+  font-size: 10px;
+  margin-top: 0px;
+}
+.tog {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.tog button {
+  background-color: transparent;
+  border: none;
+}
+.menu {
+  font-size: 30px;
+}
+.menu-button {
+  background-color: transparent;
+  border: none;
+  height: 30px;
+}
+.menuA {
+  font-size: 17px;
+}
+.hov {
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  margin-left: 130px;
+  position: fixed;
+  width: 0;
+  color: transparent;
+}
+.createBtn:hover + .hov {
+  height: 100px;
+  width: 150px;
+  border-radius: 7px;
+  background-color: #e7e3e3;
+  color: rgb(61, 61, 61);
+}
+.createDiv {
+  display: flex;
+}
+.hov h3 {
+  margin-left: 2px;
+}
+.createBtn:hover + .hov h3 {
+  color: rgb(83, 82, 82); /* Change text color on hover */
+  font-weight: 400;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pd {
+  font-size: 15px;
+}
